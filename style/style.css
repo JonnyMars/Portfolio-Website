@@ -142,6 +142,12 @@ section {
   justify-content: center;
   flex-wrap: wrap;
   flex-direction: row;
+  position:relative;
+  animation-name: headerrightswoosh;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  -webkit-animation-timing-function:linear;
 }
 .home-sec-content-small img {
    box-shadow: 5px 5px grey;
@@ -205,6 +211,14 @@ h2 {
     left: 0px;
   }
 }
+@keyframes headerrightswoosh {
+  0% {
+    right: -1000px;
+  }
+  100% {
+    right: 0px;
+  }
+}
 
 .about-sec {
   background-color: #23b38a;
@@ -213,7 +227,6 @@ h2 {
   justify-content: center;
   align-items: center;
   position: inherit;
-  padding:50px;
 }
 
 .about-sec-content {
