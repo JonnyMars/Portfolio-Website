@@ -4,11 +4,6 @@
   font-family: 'Nunito', sans-serif;
 }
 
-
-.navsmall {
-  display: none;
-}
-
 .column {
   float: left;
   width: 33.33%;
@@ -23,7 +18,7 @@
 .navbar {
   overflow: hidden;
   top: 25px;
-  right: -200px;
+  right: 29px;
   width: 60%;
   background-color: black;
   z-index: 1000;
@@ -34,13 +29,7 @@
   padding: 10px 0px 10px 0px;
   position: relative;
   float: right;
-  animation-name: navbarswoosh;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: forwards;
-}
-@keyframes navbarswoosh {
-    0%   {right:-1000px;}
-    100% {right:29px;}
+  min-width: 500px;
 }
 
 .navbar a {
@@ -118,6 +107,35 @@ button {
   top: 0;
   background-color: Red;
   z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home-sec-content {
+  width:70%;
+  height: 50%;
+}
+
+h1 {
+  font-size: 4rem;
+  position: relative;
+  animation-name: headerswoosh;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+h2 {
+  font-size: 2rem;
+  position: relative;
+  animation-name: headerswoosh;
+  animation-duration: 1.3s;
+  -webkit-animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+@keyframes headerswoosh {
+    0%   {left:-1000px;}
+    100% {left:0px;}
 }
 
 .hamburger {
@@ -155,7 +173,6 @@ button {
   }
   button {
     display: inline-block;
-    z-index: 1000;
   }
   .navline {
     width: 35px;
