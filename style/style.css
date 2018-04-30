@@ -87,7 +87,7 @@
   margin-left: 5px;
 }
 
-button {
+.navbutton {
   display: none;
   background-color: black;
   border: none;
@@ -96,12 +96,13 @@ button {
   text-align: center;
   text-decoration: none;
   font-size: 16px;
-  margin-left: 25px;
+  margin-right: 25px;
   margin-top: 15px;
+  float: right;
 }
 
 .home-sec {
-  height: 90%;
+  height: 60%;
   width: 100%;
   position: absolute;
   top: 0;
@@ -111,9 +112,10 @@ button {
   justify-content: center;
   align-items: center;
 }
+
 .home-sec-content {
-  width:70%;
-  height: 50%;
+  width: 70%;
+  height: 30%;
 }
 
 h1 {
@@ -124,6 +126,7 @@ h1 {
   -webkit-animation-fill-mode: forwards;
   animation-iteration-count: 1;
 }
+
 h2 {
   font-size: 2rem;
   position: relative;
@@ -133,9 +136,39 @@ h2 {
   animation-iteration-count: 1;
 }
 
+button {
+  padding: 10px;
+  background-color: black;
+  color: white;
+  margin-top: 8px;
+  border-style: none;
+  font-size: 1.3rem;  
+}
+
 @keyframes headerswoosh {
-    0%   {left:-1000px;}
-    100% {left:0px;}
+  0% {
+    left: -1000px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+
+.about-sec {
+  height: 90%;
+  width: 100%;
+  position: absolute;
+  top: 60%;
+  background-color: white;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-sec-content {
+  width: 70%;
+  height: 90%;
 }
 
 .hamburger {
@@ -171,7 +204,7 @@ h2 {
   .hamburger {
     display: block
   }
-  button {
+  .navbutton {
     display: inline-block;
   }
   .navline {
@@ -179,5 +212,9 @@ h2 {
     height: 5px;
     background-color: black;
     margin: 6px 0;
+  }
+  .home-sec-content {
+    width: 65%;
+    height: 80%;
   }
 }

@@ -1,6 +1,6 @@
 function openNav() {
     document.getElementById("myOffnav").style.width = "250px";
-    document.getElementById("main").style.marginLeft = "250px";
+    document.getElementById("main").style.marginRight = "250px";
     document.getElementById("menuButton").removeAttribute("class");
     document.getElementById("menuButton").setAttribute("class", "column small-hidden");
 }
