@@ -39,17 +39,8 @@
   padding: 5px;
   font-size: 1.5rem;
 }
-.navbar a:nth-child(1){
+.navbar a{
   color: #c1272d;
-}
-.navbar a:nth-child(2){
-  color: #23b38a;
-}
-.navbar a:nth-child(3){
-  color: #c1272d;
-}
-.navbar a:nth-child(4){
-  color: #23b38a;
 }
 
 
@@ -66,7 +57,7 @@
   /* change this with js */
   position: fixed;
   /* woah navbar, stay put lad */
-  z-index: 1;
+  z-index: 1000;
   /* stay on top */
   top: 0;
   left: 0;
@@ -112,17 +103,19 @@
   margin-left: 25px;
   margin-top: 22px;
   float: left;
-  z-index: 1000;
+  z-index: 1;
+  position: absolute;
 }
 section {
   width: 100%;
+  height: 100%;
 }
 
 .home-sec {
-  height: 80%;
+  height: 90%;
   width: 100%;
-  position: absolute;
-  top: 0;
+  padding-top: 65px;
+  padding-bottom: 100px;
   background-color: white;
   z-index: -1;
   display: flex;
@@ -136,16 +129,22 @@ section {
   height: 50%;
   display: flex;
   justify-content: center;
-  flex-direction: row;
   flex-wrap: wrap;
+  flex-direction: row;
 }
 .home-sec-content-large {
-  flex:0 1 0  ;
+  flex:0 1 0;
   padding: 20px;
 }
 .home-sec-content-small {
-  min-width:300px;
   flex:0.65 1 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.home-sec-content-small img {
+   box-shadow: 5px 5px grey;
 }
 
 
@@ -213,6 +212,8 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: inherit;
+  padding:50px;
 }
 
 .about-sec-content {
@@ -234,6 +235,7 @@ h2 {
   width: 100%;
   position: absolute;
   top:15px;
+  z-index: 0;
 }
 
 .smallnavlogo {
@@ -273,7 +275,8 @@ h2 {
     display: none;
   }
   .navbutton {
-    display: inline-block;
+    display: block;
+    z-index: 1;
   }
   .navline {
     width: 35px;
@@ -283,11 +286,16 @@ h2 {
   }
   .home-sec-content-small {
     justify-content: flex-end;
-    flex:1;
     margin-top: 20px;
-    padding: 5px;
   }
   .home-sec-content-wrap {
     height: 80%;
+  }
+  .home-sec-content-small img {
+     box-shadow: 0px 0px grey;
+  }
+
+  .home-sec {
+    padding-bottom: 10px;
   }
 }
