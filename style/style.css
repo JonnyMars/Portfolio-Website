@@ -20,7 +20,6 @@
   top: 25px;
   right: 29px;
   width: 60%;
-  background-color: black;
   z-index: 1000;
   display: flex;
   align-items: center;
@@ -34,16 +33,30 @@
 
 .navbar a {
   float: left;
-  color: white;
   text-align: center;
   text-decoration: none;
   margin: auto;
   padding: 5px;
   font-size: 1.5rem;
 }
+.navbar a:nth-child(1){
+  color: #c1272d;
+}
+.navbar a:nth-child(2){
+  color: #23b38a;
+}
+.navbar a:nth-child(3){
+  color: #c1272d;
+}
+.navbar a:nth-child(4){
+  color: #23b38a;
+}
+
+
 
 .navbar a:hover {
-  background-color: gray;
+  background-color: #eaeaea;
+  border-radius: 20px;
 }
 
 .offnav {
@@ -89,42 +102,71 @@
 
 .navbutton {
   display: none;
-  background-color: black;
+  background-color: #c1272d;
   border: none;
   color: white;
   padding: 7px 7px;
   text-align: center;
   text-decoration: none;
   font-size: 16px;
-  margin-right: 25px;
-  margin-top: 15px;
-  float: right;
+  margin-left: 25px;
+  margin-top: 22px;
+  float: left;
+  z-index: 1000;
 }
 
 .home-sec {
-  height: 60%;
+  height: 80%;
   width: 100%;
   position: absolute;
   top: 0;
-  background-color: Red;
+  background-color: white;
   z-index: -1;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 
-.home-sec-content {
-  width: 70%;
-  height: 30%;
+.home-sec-content-wrap {
+  width:70%;
+  height: 50%;
+  float: left;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
+.home-sec-content-large {
+  flex:0 2;
+  flex-direction: row;
+}
+.home-sec-content-small {
+  justify-content: flex-end;
+  flex:1;
+  margin-left:10%;
+}
+
+
 
 h1 {
   font-size: 4rem;
   position: relative;
   animation-name: headerswoosh;
-  animation-duration: 1s;
+  animation-duration: 1.1s;
   -webkit-animation-fill-mode: forwards;
   animation-iteration-count: 1;
+  -webkit-animation-timing-function:linear;
+}
+
+.logolarge {
+  position: relative;
+  animation-name: headerswoosh;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  -webkit-animation-iteration-count:1;
+  -webkit-animation-timing-function:linear;
 }
 
 h2 {
@@ -134,15 +176,25 @@ h2 {
   animation-duration: 1.3s;
   -webkit-animation-fill-mode: forwards;
   animation-iteration-count: 1;
+  -webkit-animation-timing-function:linear;
 }
 
-button {
+.home-sec button {
   padding: 10px;
   background-color: black;
   color: white;
-  margin-top: 8px;
+  margin-top: 10px;
   border-style: none;
-  font-size: 1.3rem;  
+  font-size: 1.3rem;
+  animation-name: headerswoosh;
+  animation-duration: 1.3s;
+  -webkit-animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  position: relative;
+}
+
+.home-sec button:hover {
+  cursor: pointer;
 }
 
 @keyframes headerswoosh {
@@ -158,8 +210,8 @@ button {
   height: 90%;
   width: 100%;
   position: absolute;
-  top: 60%;
-  background-color: white;
+  top: 80%;
+  background-color: #23b38a;
   z-index: -1;
   display: flex;
   justify-content: center;
@@ -177,6 +229,18 @@ button {
   height: 2px;
   background-color: white;
   margin: 5px 0;
+}
+
+.flex-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: absolute;
+  top:15px;
+}
+
+.smallnavlogo {
+  display: none;
 }
 
 @media screen and (max-width: 600.6px) {
@@ -204,6 +268,13 @@ button {
   .hamburger {
     display: block
   }
+  .smallnavlogo {
+    display: block;
+
+  }
+  .logolarge {
+    display: none;
+  }
   .navbutton {
     display: inline-block;
   }
@@ -213,8 +284,10 @@ button {
     background-color: black;
     margin: 6px 0;
   }
-  .home-sec-content {
-    width: 65%;
-    height: 80%;
+  .home-sec-content-small {
+    justify-content: flex-end;
+    flex:1;
+    margin-left:0%;
+    margin-top: 20px;
   }
 }
