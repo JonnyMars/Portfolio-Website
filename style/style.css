@@ -3,95 +3,164 @@
   padding: 0;
   font-family: 'Nunito', sans-serif;
 }
+
+
 .navsmall {
   display: none;
 }
 
 .column {
-    float: left;
-    width: 33.33%;
+  float: left;
+  width: 33.33%;
 }
+
 .row:after {
-    content: "";
-    display: table;
-    clear: both;
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .navbar {
-    overflow: hidden;
-    top: 0;
-    width: 100%;
-    background-color: black;
-    z-index: 1000;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 10px 0px 10px 0px;
-    position: fixed;
+  overflow: hidden;
+  top: 25px;
+  right: -200px;
+  width: 60%;
+  background-color: black;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 10px 0px 10px 0px;
+  position: relative;
+  float: right;
+  animation-name: navbarswoosh;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+}
+@keyframes navbarswoosh {
+    0%   {right:-1000px;}
+    100% {right:29px;}
 }
 
 .navbar a {
-    float: left;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    margin: auto;
-    padding: 5px;
-    font-size: 1.5rem;
+  float: left;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  margin: auto;
+  padding: 5px;
+  font-size: 1.5rem;
 }
 
-@media screen and (max-width: 650.6px) {
+.navbar a:hover {
+  background-color: gray;
+}
+
+.offnav {
+  height: 100%;
+  /* height of the off screen navbar */
+  width: 0;
+  /* change this with js */
+  position: fixed;
+  /* woah navbar, stay put lad */
+  z-index: 1;
+  /* stay on top */
+  top: 0;
+  left: 0;
+  background-color: black;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+  /* take half a second to slide */
+}
+
+.offnav a {
+  padding: 8px, 8px, 8px, 50px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  margin-left: 25px;
+  padding-top: 10px;
+}
+
+.offnav a:hover, .offcancas a:focus {
+  color: #f1f1f1/* change colour on hover */
+}
+
+.offnav .closebtn {
+  position: absolute;
+  top: 0;
+  left: 25px;
+  font-size: 36px;
+  margin-left: 5px;
+}
+
+button {
+  display: none;
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 7px 7px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin-left: 25px;
+  margin-top: 15px;
+}
+
+.home-sec {
+  height: 90%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  background-color: Red;
+  z-index: -1;
+}
+
+.hamburger {
+  display: none;
+  width: 23px;
+  height: 2px;
+  background-color: white;
+  margin: 5px 0;
+}
+
+@media screen and (max-width: 600.6px) {
   li a:hover {
-      background-color: blue;
+    background-color: blue;
   }
-
   ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      background-color: white;
-      width:60%;
-      float: right;
-      margin-top: 0px;
-      border-top-left-radius: 0px;
-      border-bottom-left-radius: 0px;
-      border-style: solid;
-      border-top-style: none;
-      border-right-style: none;
-
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+    width: 60%;
+    float: right;
+    margin-top: 0px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-style: solid;
+    border-top-style: none;
+    border-right-style: none;
   }
-
   .navbar, .navbar a {
     display: none;
   }
-
-  .navsmall {
-    display: block;
-    width: 100%;
-    border-bottom: solid;
-    padding-bottom: 30px;
+  .hamburger {
+    display: block
   }
-
-  .navsmall img {
-    float:right;
-    position: relative;
-    top: -52px;
-    right: 32px;
-
+  button {
+    display: inline-block;
+    z-index: 1000;
   }
-  .burger {
-    margin-left: 32px;
-    margin-top: 34px;
-  }
-
   .navline {
     width: 35px;
     height: 5px;
     background-color: black;
     margin: 6px 0;
   }
-
-
 }
