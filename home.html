@@ -6,11 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body>
+<body id="home">
   <!-- navbar -->
   <nav class="navbar row">
     <a href="#home">Home</a>
-    <a href="#news">About</a>
+    <a href="#about">About</a>
     <a href="#contact">Portfolio</a>
     <a href="#contact">Contact</a>
   </nav>
@@ -18,10 +18,10 @@
   <!--small navbar -->
   <div class="offnav" id="myOffnav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a href="#">&nbsp; HOME</a>
-    <a href="#">&nbsp; ABOUT</a>
-    <a href="#">&nbsp; PORTFOLIO</a>
-    <a href="#">&nbsp; CONTACT</a>
+    <a href="#" onclick="closeNav()">&nbsp; HOME</a>
+    <a href="#about" onclick="closeNav()">&nbsp; ABOUT</a>
+    <a href="#" onclick="closeNav()">&nbsp; PORTFOLIO</a>
+    <a href="#" onclick="closeNav()">&nbsp; CONTACT</a>
   </div>
   <span onclick="openNav()" id="menuButton">
                 <button class="navbutton">
@@ -50,23 +50,88 @@
     </div>
   </section>
 
-  <section class="about-sec">
+  <section id="about" class="about-sec">
     <div class="about-sec-content">
-      <div class="about-flex-column-title">
+      <div class="about-title">
         <h1>ABOUT</h1>
       </div>
       <div class="about-card-wrap">
         <article class="about-card">
-          <h2>Who am I?</h2>
+          <h2>WHO AM I?</h2>
+          <p>
+            Hi there! I am University grauduate, currently searching for my first professional job in the web industry.
+          </p>
         </article>
         <article class="about-card">
-            <h2>What dat boi do?</h2>
+            <h2>WHAT DO I DO?</h2>
             <p>
               hello hello hello hello hello hello hello hello hello v v hello
             </p>
         </article>
         <article class="about-card">
           Sup
+        </article>
+      </div>
+      <div class="skills-title">
+        <h2>Development Skills</h2>
+      </div>
+      <div class="skills-card-wrap">
+        <article class="skills-card">
+          <p>HTML5</p>
+        </article>
+        <article class="skills-card">
+            <p>CSS3</p>
+        </article>
+        <article class="skills-card">
+            <p>User Experience Design</p>
+        </article>
+        <article class="skills-card">
+          <p>Java</p>
+        </article>
+        <article class="skills-card">
+          <p>JavaScript</p>
+        </article>
+        <article class="skills-card">
+          <p>PHP</p>
+        </article>
+        <article class="skills-card">
+          <p>Laravel</p>
+        </article>
+        <article class="skills-card">
+          <p>Git</p>
+        </article>
+        <article class="skills-card">
+          <p>Gulp</p>
+        </article>
+        <article class="skills-card">
+          <p>SASS</p>
+        </article>
+        <article class="skills-card">
+          <p>Unit Testing</p>
+        </article>
+        <article class="skills-card">
+          <p>Test-driven Development</p>
+        </article>
+        <article class="skills-card">
+          <p>Behaviour-driven Development</p>
+        </article>
+        <article class="skills-card">
+          <p>Accessibility Testing</p>
+        </article>
+        <article class="skills-card">
+          <p>Performance Testing</p>
+        </article>
+        <article class="skills-card">
+          <p>Data Analysis</p>
+        </article>
+        <article class="skills-card">
+          <p>Python</p>
+        </article>
+        <article class="skills-card">
+          <p>Code Optimisation</p>
+        </article>
+        <article class="skills-card">
+          <p>Project Management</p>
         </article>
       </div>
 
