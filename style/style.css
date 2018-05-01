@@ -29,6 +29,7 @@
   position: relative;
   float: right;
   min-width: 500px;
+  margin-bottom: -90px;
 }
 
 .navbar a {
@@ -104,58 +105,55 @@
   margin-top: 22px;
   float: left;
   z-index: 1;
-  position: absolute;
+  position: static;
 }
 section {
   width: 100%;
   height: 100%;
 }
+section:first-of-type {
+  display: flex;
+  justify-content: center;
+}
 
 .home-sec {
-  height: 90%;
   width: 100%;
-  padding-top: 65px;
-  padding-bottom: 100px;
   background-color: white;
   z-index: -1;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  border-style: solid;
+  color: black;
+  padding-bottom: 100px;
+  padding-top: 100px;
 }
 
-.home-sec-content-wrap {
+.home-sec-content {
   width:100%;
-  height: 50%;
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
   flex-direction: row;
+  align-items: center ;
 }
-.home-sec-content-large {
-  flex:0 1 0;
+
+.flex-column {
+  display: flex;
+  position: relative;
+  flex-direction:column;
+  flex: 1 0 auto;
   padding: 20px;
+  align-items: flex-start;
 }
-.home-sec-content-small {
-  flex:0.65 1 0;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  flex-direction: row;
-  position:relative;
-  animation-name: headerrightswoosh;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: forwards;
-  animation-iteration-count: 1;
-  -webkit-animation-timing-function:linear;
-}
-.home-sec-content-small img {
-   box-shadow: 5px 5px grey;
+.flex-column:first-of-type {
+  align-items: flex-end;
 }
 
 
 
-h1 {
+
+h1:first-of-type {
   font-size: 4rem;
   position: relative;
   animation-name: headerswoosh;
@@ -175,7 +173,7 @@ h1 {
   -webkit-animation-timing-function:linear;
 }
 
-h2 {
+h2:first-of-type {
   font-size: 2rem;
   position: relative;
   animation-name: headerswoosh;
@@ -202,6 +200,7 @@ h2 {
 .home-sec button:hover {
   cursor: pointer;
 }
+
 
 @keyframes headerswoosh {
   0% {
@@ -255,7 +254,27 @@ h2 {
   display: none;
 }
 
+@media screen and (max-width: 911px) {
+
+  .flex-column {
+    display: flex;
+    position: relative;
+    flex-direction:column;
+    flex: 1 0 0px;
+    padding: 10px 0px 0px 0px;
+    align-items: center;
+  }
+  .flex-column:first-of-type {
+    align-items: center;
+  }
+
+}
+
 @media screen and (max-width: 542.6px) {
+
+  h1:first-of-type {
+    font-size: 3rem;
+  }
   li a:hover {
     background-color: blue;
   }
@@ -289,6 +308,7 @@ h2 {
   }
   .navbutton {
     display: block;
+    position:absolute;
     z-index: 1;
   }
   .navline {
@@ -297,17 +317,6 @@ h2 {
     background-color: black;
     margin: 6px 0;
   }
-  .home-sec-content-small {
-    justify-content: flex-end;
-    margin-top: 20px;
-  }
-  .home-sec-content-wrap {
-    height: 80%;
-  }
-  .home-sec-content-small img {
-     box-shadow: 0px 0px grey;
-  }
-
   .home-sec {
     padding-bottom: 10px;
   }
