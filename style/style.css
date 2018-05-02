@@ -5,7 +5,7 @@
 }
 
 body {
-  min-width: 400px;
+  min-width: 320px;
 }
 
 .column {
@@ -240,20 +240,20 @@ h1:first-of-type {
   justify-content: center;
 }
 
-.about-sec-content {
+.sec-content {
   width: 80%;
   height: 90%;
   display: flex;
   flex-wrap: wrap;
 }
 
-.about-title {
+.title {
   display: flex;
   width: 100%;
   padding: 0% 0% 2% 0%;
 }
 
-.about-title h1 {
+.title h1 {
   font-size: 3rem;
 }
 
@@ -275,12 +275,22 @@ h1:first-of-type {
   margin: 0.8rem;
   flex-wrap: wrap;
   flex-direction: column;
-  width: 270px;
-  height: 300px;
-  background-color: white;
+  width: 28%;
+  background-color: #28acd7;
   box-shadow: 5px 5px black;
-  padding: 10px;
-  flex-shrink: 1;
+  padding: 0.5em;
+  height: 300px;
+}
+
+.about-card-content {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 1em;
+  height: 100%;
+}
+.about-card-content p {
+  flex: 1 0 auto;
 }
 
 .about-card h2 {
@@ -309,10 +319,24 @@ h1:first-of-type {
   flex-wrap: wrap;
   flex-direction: column;
   background-color: white;
-  box-shadow: 5px 5px black;
+  box-shadow: 3.5px 3.5px black;
   padding: 10px;
   flex-shrink: 1;
 }
+.portfolio-sec {
+    background-color: #c1272d;
+    color: white;
+    z-index: -1;
+    display: flex;
+    position: inherit;
+    padding: 3% 0% 3% 0%;
+    justify-content: center;
+  }
+
+
+
+
+
 
 .hamburger {
   display: none;
@@ -352,6 +376,16 @@ h1:first-of-type {
   }
   .about-flex-column {
     flex: 1 1 100%;
+  }
+  .about-card {
+    width: 80%;
+  }
+  .about-card {
+    height: auto;
+  }
+  .navbar {
+    width: 100%;
+    right: 0px;
   }
 }
 
@@ -405,11 +439,20 @@ h1:first-of-type {
   }
   .homepic {
     box-shadow: 0px 0px #c1272d;
+    width: 320px;
+    height: 320px;
+  }
+  .flex-column:first-of-type {
+    flex: 5 0 auto;
   }
   .skills-title {
     display: none;
   }
   .skills-card-wrap {
     display: none;
+  }
+  .about-card {
+    width: 90%;
+    height: auto;
   }
 }
