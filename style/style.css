@@ -345,6 +345,7 @@ h1:first-of-type {
     background-color: #d84146;
     border-style: solid;
     border-color: #ffff02;
+    border-width: 0.15px;
   }
 
   .portfolio-entry-large {
