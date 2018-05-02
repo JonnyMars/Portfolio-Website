@@ -330,45 +330,39 @@ h1:first-of-type {
     display: flex;
     position: inherit;
     padding: 3% 0% 3% 0%;
+    width: 100%;
     justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 
   .portfilio-entry-wrap {
     display: flex;
-    width: 100%;
-    flex-wrap: wrap-reverse;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 1.5em;
-    margin: 1.5em 0em 1.5em 0em;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 1em;
     color: white;
     background-color: #d84146;
     border-style: solid;
     border-color: #ffff02;
     border-width: 0.15px;
-    max-width: 1200px;
+    width: 302px
   }
 
   .portfolio-entry-large {
-    width: 55%;
+    width: 100%;
     display: flex;
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
-    padding-right: 10%;
-  }
-  .portfilio-entry-wrap:nth-child(3) {
-    flex-wrap: wrap;
+    padding: 1em;
   }
 
-  .portfolio-entry-large:nth-child(2) {
-    padding-right: 0%;
-    width: 55%;
-    padding-left: 10%;
-  }
   .portfolio-entry-small {
-    justify-content: flex-start;
-    width: 35%;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 1px
   }
   .portfilio-entry-wrap button {
     padding: 10px;
@@ -413,6 +407,8 @@ h1:first-of-type {
 .smallnavlogo {
   display: none;
 }
+
+
 
 @media screen and (max-width: 911px) {
   .flex-column {
