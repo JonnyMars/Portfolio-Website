@@ -346,6 +346,7 @@ h1:first-of-type {
     border-style: solid;
     border-color: #ffff02;
     border-width: 0.15px;
+    max-width: 1200px;
   }
 
   .portfolio-entry-large {
