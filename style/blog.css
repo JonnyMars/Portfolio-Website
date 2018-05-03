@@ -69,6 +69,7 @@
 
 .blog-sec-content .image img {
   width: 70%;
+  max-width: 700px;
 }
 
 .blog-sec-content .title h1{
