@@ -391,7 +391,6 @@ h1:first-of-type {
 }
 
 .flex-wrapper {
-  display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -400,6 +399,7 @@ h1:first-of-type {
   z-index: 0;
   height: 80px;
   background-color: white;
+  display: none;
 }
 .flex-wrapper img {
   position: relative;
@@ -570,6 +570,9 @@ h1:first-of-type {
   }
   .portfilio-entry-wrap p {
     display: none;
+  }
+  .flex-wrapper {
+    display: flex;
   }
 
 }
