@@ -2,21 +2,45 @@
   overflow: hidden;
   width: 100%;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   height: 75px;
   align-items: center;
   border-bottom: solid;
   text-decoration: none;
+  position: fixed;
+  background-color: white;
+  z-index: 1;
 }
-.blog-nav-wrap{
+
+.home-button {
+  background-color: #c1272d;
+  z-index: 2;
+  position: fixed;
+  top: 20px;
+  left: 3%;
+  padding: 7px 7px;
+  color: white;
+  content: "< Home"
+}
+
+.blogbar-wrap{
   display: flex;
   justify-content: space-between;
-  width:100%;
+  align-items: center;
 }
+.blogbar-wrap{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
 .blog-sec {
   width: 100%;
   display: flex;
   justify-content: center;
+  position: absolute;
+  top: 75px;
+
 }
 .blog-sec-content {
   width: 70%;
@@ -44,6 +68,7 @@
   padding: 1em;
   background-color: #f5f5f5;
   border-style: solid;
+  border-color: #23b38a;
 }
 
 .blog-sec-content h2 {
@@ -69,6 +94,13 @@
 
   .blog-sec-content {
     width: 90%;
+  }
+  .blogbar h2 {
+    display: none;
+
+  }
+  .home-button {
+    content: "<";
   }
 
 
