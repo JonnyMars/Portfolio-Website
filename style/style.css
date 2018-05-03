@@ -113,8 +113,23 @@ body {
   margin-left: 25px;
   margin-top: 22px;
   float: left;
-  z-index: 1;
-  position: static;
+  z-index: 2;
+  position: fixed;
+}
+.flex-wrapper {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  height: 80px;
+  background-color: white;
+  display: none;
+}
+
+.flex-wrapper img {
+  position: relative;
+  bottom: 2px;
 }
 
 section {
@@ -371,22 +386,6 @@ h1:first-of-type {
   margin: 5px 0;
 }
 
-.flex-wrapper {
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  position: fixed;
-  top: 0px;
-  z-index: 0;
-  height: 80px;
-  background-color: white;
-  display: none;
-}
-
-.flex-wrapper img {
-  position: relative;
-  bottom: 2px;
-}
 
 .smallnavlogo {
   display: none;
@@ -522,7 +521,7 @@ h1:first-of-type {
   .navbutton {
     display: block;
     position: fixed;
-    z-index: 1;
+    z-index: 2;
   }
   .navline {
     width: 35px;
@@ -556,5 +555,6 @@ h1:first-of-type {
   }
   .flex-wrapper {
     display: flex;
+    z-index: 1;
   }
 }
