@@ -393,15 +393,69 @@ h1:first-of-type {
 .flex-wrapper {
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 100%;
-  position: absolute;
-  top: 15px;
+  position: fixed;
+  top: 0px;
   z-index: 0;
+  height: 80px;
+  background-color: white;
+}
+.flex-wrapper img {
+  position: relative;
+  bottom: 2px;
 }
 
 .smallnavlogo {
   display: none;
 }
+.contact-sec {
+    background-color: white;
+    color: black;
+    z-index: -1;
+    display: flex;
+    position: inherit;
+    width: 100%;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .contact-sec .sec-content {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .content-item {
+    display: flex;
+    background-color: white;
+    padding: 2em;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  .content-item h2 {
+    margin-bottom: 10px;
+  }
+  .content-item p {
+    margin-bottom: 4px;
+  }
+
+  .content-item a {
+    color: #c1272d;
+  }
+
+  .social-media-wrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+
+  }
+  .social-media-wrap p {
+
+    margin-left: 15px;
+
+  }
 
 
 
@@ -484,7 +538,7 @@ h1:first-of-type {
   }
   .navbutton {
     display: block;
-    position: absolute;
+    position: fixed;
     z-index: 1;
   }
   .navline {
