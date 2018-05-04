@@ -273,6 +273,9 @@ h1:first-of-type {
   box-shadow: 5px 5px black;
   padding: 0.5em;
 }
+.about-card a {
+  color: black;
+}
 
 .about-card-content {
   display: flex;
