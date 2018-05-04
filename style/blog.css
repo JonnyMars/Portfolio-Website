@@ -63,13 +63,36 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
+  flex-direction: column;
   padding: 1em;
+}
+.blog-sec-content .image p{
+  color: #c1272d;
+}
+
+a {
+  color: #c1272d;
+}
+b {
+  color: #c1272d;
 }
 
 .blog-sec-content .image img {
   width: 70%;
   max-width: 700px;
+}
+.blog-sec-content .rubyside-img  {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 1em;
+}
+
+.blog-sec-content .rubyside-img img {
+  width: 100%;
+  max-width: 360px;
 }
 
 .blog-sec-content .title h1{
@@ -107,6 +130,11 @@
   flex-direction: column;
   padding: 1em;
   margin-top: 1em;
+}
+
+.contact-sec {
+  position: relative;
+  bottom: 0;
 }
 
 
