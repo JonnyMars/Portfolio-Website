@@ -24,6 +24,7 @@
   content: "< Home"
 }
 
+
 .blogbar-wrap{
   display: flex;
   justify-content: space-between;
@@ -80,6 +81,20 @@ b {
 .blog-sec-content .image img {
   width: 70%;
   max-width: 700px;
+}
+.blog-sec-content .image-multi  {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 1em;
+}
+.blog-sec-content .image-multi img {
+  max-width: 300px;
+  max-height: 200px;
+  padding: 10px;
 }
 .blog-sec-content .rubyside-img  {
   width: 100%;
