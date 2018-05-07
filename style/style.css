@@ -469,6 +469,13 @@ h1:first-of-type {
 .social-media-wrap p {
   margin-left: 15px;
 }
+@media screen and (max-width: 1253px) {
+  .portfilio-entry {
+    width: 45%;
+  }
+
+}
+
 
 @media screen and (max-width: 1100px) {
   .about-flex-column {
@@ -479,9 +486,6 @@ h1:first-of-type {
     width: 85%;
     height: auto;
     margin: 0.8em;
-  }
-  .portfilio-entry {
-    width: 90%;
   }
   .portfolio-entry-img {
     display: flex;
@@ -507,6 +511,9 @@ h1:first-of-type {
   .navbar {
     width: 100%;
     right: 0px;
+  }
+  .portfilio-entry {
+    width: 90%;
   }
   .portfilio-entry-wrap {
     justify-content: center;
