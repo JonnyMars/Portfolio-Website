@@ -138,6 +138,10 @@ section {
   height: 100%;
 }
 
+#arrow {
+  display: none;
+}
+
 .home-sec {
   width: 100%;
   background-color: white;
@@ -298,6 +302,7 @@ h1:first-of-type {
   display: flex;
   width: 100%;
   padding: 0% 0% 5% 0%;
+  background-color: #37B18C;
 }
 
 .skills-card-wrap {
@@ -576,10 +581,45 @@ h1:first-of-type {
     flex: 5 0 auto;
   }
   .skills-title {
-    display: none;
+    display: flex;
+    background-color: white;
+    padding-top:20px;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom:20px;
+    margin-top: 20px;
+    margin-bottom: 18px;
+    justify-content: space-between;
+    transition: 0.6s;
+  }
+  .skills-title h2{
+    margin: 0px;
   }
   .skills-card-wrap {
     display: none;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  .skills-card {
+    width: 80%;
+    box-shadow: 0px 0px black;
+    border-bottom: 1px solid #D8D8D8;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.14);
+    margin:0;
+    padding:20px;
+    transition:background 0.2s;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+  }
+  .skills-card:nth-child(even) {
+    transform: perspective(100px) rotateX(3deg) translateY(2px) scale(1.001);
+    background: linear-gradient(to bottom,  #ffffff 0%,#EFEFEF 100%);
+  }
+  .skills-card:nth-child(odd) {
+    transform: perspective(100px) rotateX(-3deg) translateY(3px);
+    background: linear-gradient(to top,  #ffffff 0%,#EFEFEF 100%);
   }
   .about-card {
     width: 95%;
@@ -591,5 +631,31 @@ h1:first-of-type {
   .flex-wrapper {
     display: flex;
     z-index: 1;
+  }
+  .about-sec .sec-content {
+      width: 100%;
+      height: 90%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+  .about-sec .sec-content .about-card-wrap {
+    width: 80%;
+  }
+
+  .about-sec .sec-content .skills-sec {
+      width: 100%;
+  }
+
+  .about-sec .sec-content .title {
+    width: 100%;
+  }
+  #arrow {
+    display: block;
+    cursor: pointer;
+    transform:scale(2.5,1.25) rotate(180deg);
+    transition: 0.6s;
+  }
   }
 }

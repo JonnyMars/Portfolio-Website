@@ -51,10 +51,10 @@
 
   <section id="about" class="about-sec">
     <div class="sec-content">
-      <div class="title">
-        <h1>ABOUT</h1>
-      </div>
       <div class="about-card-wrap">
+        <div class="title">
+          <h1>ABOUT</h1>
+        </div>
         <article class="about-card">
           <div class="about-card-content">
             <h2>WHO AM I?</h2>
@@ -67,8 +67,8 @@
           <div class="about-card-content">
             <h2>WHAT DO I DO?</h2>
             <p>
-              Throughout my three years studying at university, I have experienced many different web technologies. From this, I have developed a main interest in Front-End Web Design and User Experience (UX) Design. I love understanding how a
-              user interacts with a system, and improving the system for the user.
+              Throughout my three years studying at university, I have experienced many different web technologies. From this, I have developed a main interest in Front-End Web Design and User Experience (UX) Design. I love understanding how a user interacts with a
+              system, and improving the system for the user.
             </p>
           </div>
         </article>
@@ -82,7 +82,8 @@
         </article>
       </div>
       <div class="skills-title">
-        <h2>Development Skills</h2>
+        <h2>Skills</h2>
+        <h2 id="arrow">^</h2>
       </div>
       <div class="skills-card-wrap">
         <article class="skills-card">
@@ -156,46 +157,46 @@
       </div>
       <div class="portfolio-entry-wrap">
 
-      <div class="portfilio-entry">
-        <div class="portfolio-entry-img">
-          <h2>BBC</h2>
+        <div class="portfilio-entry">
+          <div class="portfolio-entry-img">
+            <h2>BBC</h2>
+          </div>
+          <div class="portfolio-entry-large">
+            <h2>BBC Subtitle Icon</h2>
+            <p>
+              The BBC provided me with a brief. They wanted their subtitle icon, which is used across all of their websites, updating to be more recognisable by all audiences. Firstly, icons were researched and competitors' icons were analysed to provide a solid knowledge
+              base...
+            </p>
+            <a href="blog/bbc-subtitle-icon.html"><button>Find Out More...</button></a>
+          </div>
         </div>
-        <div class="portfolio-entry-large">
-          <h2>BBC Subtitle Icon</h2>
-          <p>
-            The BBC provided me with a brief. They wanted their subtitle icon, which is used across all of their websites, updating to be more recognisable by all audiences. Firstly, icons were researched and competitors' icons were analysed to provide a solid knowledge
-            base...
-          </p>
-          <a href="blog/bbc-subtitle-icon.html"><button>Find Out More...</button></a>
+        <div class="portfilio-entry">
+          <div class="portfolio-entry-img">
+            <img src="img/ruby-port.png" />
+          </div>
+          <div class="portfolio-entry-large">
+            <h2>Rubyside Redesign</h2>
+            <p>
+              Cleversteam, the people who run Rubyside <a href="http://www.rubyside.co.uk">(rubyside.co.uk)</a> provided me with a brief. They wanted the current Rubyside website to be redesigned, making it look more modern and up to date. Firstly, desk
+              research was undertaken to understand the styling of "Ruby" and "Ruby on Rails"...
+            </p>
+            <a href="blog/rubyside.html"><button>Find Out More...</button></a>
+          </div>
         </div>
-      </div>
-      <div class="portfilio-entry">
-        <div class="portfolio-entry-img">
-          <img src="img/ruby-port.png" />
-        </div>
-        <div class="portfolio-entry-large">
-          <h2>Rubyside Redesign</h2>
-          <p>
-            Cleversteam, the people who run Rubyside <a href="http://www.rubyside.co.uk">(rubyside.co.uk)</a> provided me with a brief. They wanted the current Rubyside website to be redesigned, making it look more modern and up to date. Firstly, desk research was
-            undertaken to understand the styling of "Ruby" and "Ruby on Rails"...
-          </p>
-          <a href="blog/rubyside.html"><button>Find Out More...</button></a>
-        </div>
-      </div>
-      <div class="portfilio-entry">
-        <div class="portfolio-entry-img">
-          <img src="img/port-port.png" />
-        </div>
-        <div class="portfolio-entry-large">
-          <h2>Portfolio Website</h2>
-          <p>
-            For my universtiy module, I had to create a portfolio website to present my two briefs (BBC Subtitle icon & Rubyside Redesign) to the clients. To do this, desk research was done looking at other portfolio websites and inspiration to best get my "style"
-            across... </p>
-          <a href="blog/portfolio-website.html"><button>Find Out More...</button></a>
+        <div class="portfilio-entry">
+          <div class="portfolio-entry-img">
+            <img src="img/port-port.png" />
+          </div>
+          <div class="portfolio-entry-large">
+            <h2>Portfolio Website</h2>
+            <p>
+              For my universtiy module, I had to create a portfolio website to present my two briefs (BBC Subtitle icon & Rubyside Redesign) to the clients. To do this, desk research was done looking at other portfolio websites and inspiration to best get my "style"
+              across... </p>
+            <a href="blog/portfolio-website.html"><button>Find Out More...</button></a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
   </section>
   <section id="contact" class="contact-sec">
     <div class="sec-content">
@@ -265,5 +266,37 @@
 <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script type="text/javascript" src="js/js.js"></script>
+
+<script>
+  const arrow = document.getElementById('arrow');
+  const skills = document.querySelector('.skills-card-wrap');
+
+  var x = window.matchMedia("(max-width: 542.6px)")
+
+  //this handles the accordion on small screens/mobile devices
+  function toggleSkills() {
+    if (skills.style.display === 'flex') {
+      skills.style.display = 'none';
+      arrow.style.transform = 'rotate(180deg) scale(2.5, 1.25)';
+    } else {
+      skills.style.display = 'flex';
+      arrow.style.transform = 'rotate(0deg) scale(2.5, 1.25)';
+    }
+  }
+
+  //this handles the media query to make the skills show if the accordion has been closed
+  function showForLarge(x) {
+    if (x.matches) {
+      skills.style.display = 'none';
+    } else {
+      skills.style.display = 'flex';
+    }
+  }
+
+  showForLarge(x);
+
+  arrow.addEventListener('click', toggleSkills);
+  x.addListener(showForLarge)
+</script>
 
 </html>
