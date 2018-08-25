@@ -267,6 +267,7 @@ h1:first-of-type {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: stretch;
+  padding-bottom: 5px;
 }
 
 .about-card {
