@@ -665,4 +665,34 @@ h1:first-of-type {
   }
 }
 
+.inactive-banner {
+  position: fixed;
+  width: 100%;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+  z-index: 100;
+  display: inline;
+  text-align: center;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+
+  
+}
+
+.inactive-banner a {
+  display: inline;
+  color: #FFF;
+}
+
+@media screen and (max-width: 542.6px) {
+  .inactive-banner {
+    top: 80px;
+  }
+
+  .home-sec {
+    padding-top: 150px;
+  }
 }
